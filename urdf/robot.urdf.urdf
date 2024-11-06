@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot.urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0076247000056022 1.03409780738417E-11 0.0494159060031512"
+        rpy="0 0 0" />
+      <mass
+        value="0.724539308134276" />
+      <inertia
+        ixx="0.00392524953392196"
+        ixy="-3.37182308102671E-11"
+        ixz="0.000128556224286988"
+        iyy="0.0065404312440558"
+        iyz="-2.68121054912136E-17"
+        izz="0.00775130913744" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="1.0266E-05 1.2863E-07 -0.01031"
+        rpy="0 0 0" />
+      <mass
+        value="0.029734" />
+      <inertia
+        ixx="1.2291E-05"
+        ixy="2.7737E-10"
+        ixz="5.2502E-12"
+        iyy="1.2291E-05"
+        iyz="-2.757E-11"
+        izz="2.0378E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.043261 -0.1225 0.02"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-1.0266E-05 1.2863E-07 0.01031"
+        rpy="0 0 0" />
+      <mass
+        value="0.029734" />
+      <inertia
+        ixx="1.2291E-05"
+        ixy="-2.7737E-10"
+        ixz="5.2502E-12"
+        iyy="1.2291E-05"
+        iyz="2.757E-11"
+        izz="2.0378E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.043282 0.1225 0.02"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="caster_wheel">
+    <inertial>
+      <origin
+        xyz="0 6.38658704137651E-05 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0200390403286075" />
+      <inertia
+        ixx="2.00498263003566E-06"
+        ixy="-2.27274165753216E-22"
+        ixz="-7.07517105096922E-22"
+        iyy="3.94896715060734E-06"
+        iyz="5.73500181888699E-23"
+        izz="3.47493517136594E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/caster_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/caster_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.096728 0 0.005"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_wheel" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="link_ydlidar">
+    <inertial>
+      <origin
+        xyz="0.0074834698833364 0.0106681277328403 -9.19261110875341E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.33076913637071" />
+      <inertia
+        ixx="0.00061491794045409"
+        ixy="-0.00015824302591117"
+        ixz="8.01984318974422E-07"
+        iyy="0.00109815200027136"
+        iyz="-3.09162986587591E-06"
+        izz="0.000960697335617222" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/link_ydlidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot.urdf/meshes/link_ydlidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ydlidar"
+    type="fixed">
+    <origin
+      xyz="0.071461 -0.00080282 0.0776"
+      rpy="1.5708 0 0.019092" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_ydlidar" />
+    <axis
+      xyz="0 0 0" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+</robot>
